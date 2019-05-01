@@ -1,0 +1,511 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{161F0DB5-8F68-4B88-A962-B37C439B4390}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Innov8ivePortal</RootNamespace>
+    <AssemblyName>Innov8ivePortal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocuSign.eSign, Version=2.1.10.0, Culture=neutral, PublicKeyToken=7fca6fcbbc219ede, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocuSign.eSign.dll.2.1.10\lib\net45\DocuSign.eSign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharpSigned.105.2.3\lib\net46\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.2.206221351\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apipw\index.aspx" />
+    <Content Include="assets\css\demo.css" />
+    <Content Include="assets\css\gsdk.css" />
+    <Content Include="assets\img\apple-icon.png" />
+    <Content Include="assets\img\bg.jpg" />
+    <Content Include="assets\img\blurred-black-cover.jpeg" />
+    <Content Include="assets\img\carousel_blue.png" />
+    <Content Include="assets\img\carousel_green.png" />
+    <Content Include="assets\img\carousel_orange.png" />
+    <Content Include="assets\img\carousel_red.png" />
+    <Content Include="assets\img\cover_4.jpg" />
+    <Content Include="assets\img\cover_4_blur.jpg" />
+    <Content Include="assets\img\dulau.jpg" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\mask.png" />
+    <Content Include="assets\img\mockup.png" />
+    <Content Include="assets\img\new_logo.png" />
+    <Content Include="assets\img\tim_80x80.png" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\get-shit-done.js" />
+    <Content Include="assets\js\gsdk-bootstrapswitch.js" />
+    <Content Include="assets\js\gsdk-checkbox.js" />
+    <Content Include="assets\js\gsdk-radio.js" />
+    <Content Include="assets\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="bootstrap3\css\bootstrap-theme.css" />
+    <Content Include="bootstrap3\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap3\css\bootstrap.css" />
+    <Content Include="bootstrap3\css\bootstrap.min.css" />
+    <Content Include="bootstrap3\css\font-awesome.css" />
+    <Content Include="bootstrap3\fonts\fontawesome-webfont.svg" />
+    <Content Include="bootstrap3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap3\js\bootstrap.js" />
+    <Content Include="bootstrap3\js\bootstrap.min.js" />
+    <Content Include="bulksend\login.aspx" />
+    <Content Include="components.html" />
+    <Content Include="Content\mine.css" />
+    <Content Include="Content\uscc.css" />
+    <Content Include="Global.asax" />
+    <Content Include="hmd\body.aspx" />
+    <Content Include="hmd\envelope.aspx" />
+    <Content Include="hmd\formdata.aspx" />
+    <Content Include="hmd\index.aspx" />
+    <Content Include="hmd\pdf.aspx" />
+    <Content Include="hmd\prodocs.aspx" />
+    <Content Include="hmd\promode.aspx" />
+    <Content Include="hmd\signer1catch.aspx" />
+    <Content Include="hmd\signer2start.aspx" />
+    <Content Include="hmd\status.aspx" />
+    <Content Include="index1.html" />
+    <Content Include="jquery\jquery-1.10.2.js" />
+    <Content Include="jquery\jquery-ui.custom.min.js" />
+    <Content Include="index.html" />
+    <Content Include="notification.html" />
+    <Content Include="template.html" />
+    <Content Include="tutorial.html" />
+    <Content Include="uscc\001.aspx" />
+    <Content Include="uscc\002.aspx" />
+    <Content Include="uscc\003.aspx" />
+    <Content Include="uscc\004.aspx" />
+    <Content Include="uscc\005.aspx" />
+    <Content Include="uscc\006.aspx" />
+    <Content Include="uscc\007.aspx" />
+    <Content Include="uscc\008.aspx" />
+    <Content Include="uscc\009.aspx" />
+    <Content Include="uscc\010.aspx" />
+    <Content Include="uscc\011.aspx" />
+    <Content Include="uscc\012.aspx" />
+    <Content Include="uscc\013.aspx" />
+    <Content Include="uscc\assocLandingPage.aspx" />
+    <Content Include="uscc\customerfinish.aspx" />
+    <Content Include="uscc\device.aspx" />
+    <Content Include="uscc\finish.aspx" />
+    <Content Include="uscc\pdf.aspx" />
+    <Content Include="uscc\signer1catch.aspx" />
+    <Content Include="uscc\signer2start.aspx" />
+    <Content Include="uscc\status.aspx" />
+    <Content Include="uscc\survey.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="apipw\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="apipw\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bulksend\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bulksend\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\body.aspx.cs">
+      <DependentUpon>body.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\body.aspx.designer.cs">
+      <DependentUpon>body.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\envelope.aspx.cs">
+      <DependentUpon>envelope.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\envelope.aspx.designer.cs">
+      <DependentUpon>envelope.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\formdata.aspx.cs">
+      <DependentUpon>formdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\formdata.aspx.designer.cs">
+      <DependentUpon>formdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\pdf.aspx.cs">
+      <DependentUpon>pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\pdf.aspx.designer.cs">
+      <DependentUpon>pdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\prodocs.aspx.cs">
+      <DependentUpon>prodocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\prodocs.aspx.designer.cs">
+      <DependentUpon>prodocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\promode.aspx.cs">
+      <DependentUpon>promode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\promode.aspx.designer.cs">
+      <DependentUpon>promode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\signer1catch.aspx.cs">
+      <DependentUpon>signer1catch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\signer1catch.aspx.designer.cs">
+      <DependentUpon>signer1catch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\signer2start.aspx.cs">
+      <DependentUpon>signer2start.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\signer2start.aspx.designer.cs">
+      <DependentUpon>signer2start.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hmd\status.aspx.cs">
+      <DependentUpon>status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hmd\status.aspx.designer.cs">
+      <DependentUpon>status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uscc\001.aspx.cs">
+      <DependentUpon>001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\001.aspx.designer.cs">
+      <DependentUpon>001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\002.aspx.cs">
+      <DependentUpon>002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\002.aspx.designer.cs">
+      <DependentUpon>002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\003.aspx.cs">
+      <DependentUpon>003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\003.aspx.designer.cs">
+      <DependentUpon>003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\004.aspx.cs">
+      <DependentUpon>004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\004.aspx.designer.cs">
+      <DependentUpon>004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\005.aspx.cs">
+      <DependentUpon>005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\005.aspx.designer.cs">
+      <DependentUpon>005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\006.aspx.cs">
+      <DependentUpon>006.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\006.aspx.designer.cs">
+      <DependentUpon>006.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\007.aspx.cs">
+      <DependentUpon>007.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\007.aspx.designer.cs">
+      <DependentUpon>007.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\008.aspx.cs">
+      <DependentUpon>008.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\008.aspx.designer.cs">
+      <DependentUpon>008.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\009.aspx.cs">
+      <DependentUpon>009.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\009.aspx.designer.cs">
+      <DependentUpon>009.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\010.aspx.cs">
+      <DependentUpon>010.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\010.aspx.designer.cs">
+      <DependentUpon>010.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\011.aspx.cs">
+      <DependentUpon>011.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\011.aspx.designer.cs">
+      <DependentUpon>011.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\012.aspx.cs">
+      <DependentUpon>012.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\012.aspx.designer.cs">
+      <DependentUpon>012.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\013.aspx.cs">
+      <DependentUpon>013.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\013.aspx.designer.cs">
+      <DependentUpon>013.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\assocLandingPage.aspx.cs">
+      <DependentUpon>assocLandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\assocLandingPage.aspx.designer.cs">
+      <DependentUpon>assocLandingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\customerfinish.aspx.cs">
+      <DependentUpon>customerfinish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\customerfinish.aspx.designer.cs">
+      <DependentUpon>customerfinish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\device.aspx.cs">
+      <DependentUpon>device.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\device.aspx.designer.cs">
+      <DependentUpon>device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\finish.aspx.cs">
+      <DependentUpon>finish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\finish.aspx.designer.cs">
+      <DependentUpon>finish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\pdf.aspx.cs">
+      <DependentUpon>pdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\pdf.aspx.designer.cs">
+      <DependentUpon>pdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\signer1catch.aspx.cs">
+      <DependentUpon>signer1catch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\signer1catch.aspx.designer.cs">
+      <DependentUpon>signer1catch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\signer2start.aspx.cs">
+      <DependentUpon>signer2start.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\signer2start.aspx.designer.cs">
+      <DependentUpon>signer2start.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\status.aspx.cs">
+      <DependentUpon>status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\status.aspx.designer.cs">
+      <DependentUpon>status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uscc\survey.aspx.cs">
+      <DependentUpon>survey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uscc\survey.aspx.designer.cs">
+      <DependentUpon>survey.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\.DS_Store" />
+    <Content Include="assets\css\.DS_Store" />
+    <Content Include="assets\img\.DS_Store" />
+    <Content Include="assets\js\.DS_Store" />
+    <Content Include="assets\js\presentation-page\.DS_Store" />
+    <Content Include="assets\sass\.DS_Store" />
+    <Content Include="assets\sass\gsdk.scss" />
+    <Content Include="assets\sass\gsdk\.DS_Store" />
+    <Content Include="assets\sass\gsdk\mixins\.DS_Store" />
+    <Content Include="assets\sass\gsdk\mixins\_buttons.scss" />
+    <Content Include="assets\sass\gsdk\mixins\_inputs.scss" />
+    <Content Include="assets\sass\gsdk\mixins\_labels.scss" />
+    <Content Include="assets\sass\gsdk\mixins\_navbars.scss" />
+    <Content Include="assets\sass\gsdk\mixins\_tabs.scss" />
+    <Content Include="assets\sass\gsdk\mixins\_transparency.scss" />
+    <Content Include="assets\sass\gsdk\mixins\_vendor-prefixes.scss" />
+    <Content Include="assets\sass\gsdk\_alerts.scss" />
+    <Content Include="assets\sass\gsdk\_buttons.scss" />
+    <Content Include="assets\sass\gsdk\_carousel.scss" />
+    <Content Include="assets\sass\gsdk\_checkbox-radio-switch.scss" />
+    <Content Include="assets\sass\gsdk\_collapse.scss" />
+    <Content Include="assets\sass\gsdk\_dropdown.scss" />
+    <Content Include="assets\sass\gsdk\_inputs.scss" />
+    <Content Include="assets\sass\gsdk\_labels-and-progress-bars.scss" />
+    <Content Include="assets\sass\gsdk\_misc.scss" />
+    <Content Include="assets\sass\gsdk\_mixins.scss" />
+    <Content Include="assets\sass\gsdk\_modal.scss" />
+    <Content Include="assets\sass\gsdk\_navbars.scss" />
+    <Content Include="assets\sass\gsdk\_responsive.scss" />
+    <Content Include="assets\sass\gsdk\_sliders.scss" />
+    <Content Include="assets\sass\gsdk\_tabs-navs-pagination.scss" />
+    <Content Include="assets\sass\gsdk\_tooltips.scss" />
+    <Content Include="assets\sass\gsdk\_typography.scss" />
+    <Content Include="assets\sass\gsdk\_variables.scss" />
+    <Content Include="bootstrap3\.DS_Store" />
+    <Content Include="bootstrap3\css\.DS_Store" />
+    <Content Include="bootstrap3\fonts\.DS_Store" />
+    <Content Include="bootstrap3\fonts\fontawesome-webfont.eot" />
+    <Content Include="bootstrap3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="bootstrap3\fonts\fontawesome-webfont.woff" />
+    <Content Include="bootstrap3\fonts\FontAwesome.otf" />
+    <Content Include="bootstrap3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap3\js\.DS_Store" />
+    <Content Include="jquery\.DS_Store" />
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\innov8ive.app - Web Deploy.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="hmd\json\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61696</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61696/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,141 @@
+﻿.panel > .panel-heading {
+    background-color: #006AA2;
+    color: white;
+}
+
+.jumbotron {
+    color: #006AA2;
+    text-align: center;
+    align-content: center;
+    background-color: transparent;
+}
+
+.btn-group-vertical {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.btn-group {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.buttonGroup {
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    height: 75px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.table-responsive {
+    width: 100%;
+}
+
+h3 {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+h5 {
+    color: #006AA2;
+}
+
+#continue {
+    margin-top: 20px;
+}
+
+.label {
+    color: black;
+}
+
+#intro {
+    margin-bottom: 20px;
+}
+
+.container-fluid {
+    height: 1600px;
+    background: url(https://www.uscellular.com/uscellular/images/home/fall_hires.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#continueDiv {
+    text-align: center;
+}
+
+#signerAction {
+    color: #006AA2;
+}
+
+.dd {
+    margin-bottom: 10px;
+}
+
+.mybtn {
+    border: solid;
+    border-width: 1px;
+    color: white;
+    background-color: #EB3546;
+}
+
+.modalText {
+    color: #006AA2;
+}
+
+.deviceLabel {
+    color: #006AA2;
+}
+
+#errorMessage {
+    color: red;
+}
+
+#waiting {
+    color: red;
+}
+
+.background {
+    background-color: #1F2224;
+}
+
+.buttonRow {
+    background-color: white;
+    float: right;
+    margin-right: 20px;
+}
+
+.bottomButton {
+    float: none;
+}
+
+.pButton {
+    background-color: #fca00c;
+    width: 200px;
+}
+
+.sButton {
+    width: 100px;
+}
+
+.modal-lg {
+    width: 80%;
+}

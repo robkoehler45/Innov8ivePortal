@@ -1,0 +1,92 @@
+﻿.jumbotron {
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+}
+
+h3 {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+#walkthrough {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.img-responsive {
+    display: inline-block;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#continueDiv {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+#continue {
+    border-radius: 5px;
+}
+
+.btn {
+    border: solid;
+    border-width: 1px;
+}
+
+.table-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    float: none;
+    display: inline-table;
+}
+
+.row {
+    text-align: center;
+}
+
+#fd {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.btn-group {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: inline-block;
+    width: inherit;
+    text-align: center;
+}
+
+.img-responsive {
+    height: 50px;
+    margin: 0px;
+}
+
+.navbar-default {
+
+}
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
