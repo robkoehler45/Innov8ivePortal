@@ -1,0 +1,37 @@
+﻿body {
+}
+
+.btn-primary {
+    margin-bottom: 20px;
+    background-color: #02528E;
+}
+
+h3 {
+    color: #02528E;
+}
+
+.jumbotron {
+    height: 200px;
+    background-color: white;
+}
+
+.btn-group {
+    border: thin;
+    margin-top: 20px;
+}
+
+.btn {
+    border: thin;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #02528E;
+}
+
+#fd {
+    margin: auto;
+}
+
+.table-responsive {
+    margin: auto;
+}

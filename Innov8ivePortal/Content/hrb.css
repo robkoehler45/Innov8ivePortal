@@ -1,0 +1,21 @@
+﻿body {
+}
+
+.jumbotron {
+    background-color: #6AA508;
+    text-align: center;
+    color: white;
+}
+
+.role {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #6AA508;
+    color: white;
+}
+
+.space {
+    margin-top: 10px;
+}
